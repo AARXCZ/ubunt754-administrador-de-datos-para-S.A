@@ -8,16 +8,38 @@
 </head>
 <body>
     <header id="head">
-        <h1>logo</h1>
+        <h1 class="logo-image">logo</h1>
         <h1 class="name-page">Oficina Del Alumno</h1>
     </header>
     <nav class="nav-bar">
-        <h1>calendario y barra de busqueda</h1>
+        <div class="calendary-div"><input class="calendary" type="date"></div>
+        <div class="searching"><input type="search"></div>
     </nav>
     <section>
-        <table>
-            <h1>tablas de los alumnos</h1>
-        </table>
+         <h2>Subir Archivos (Provisional)</h2>
+
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" name="archivo" required>
+    <input type="text" name="comentario" placeholder="Comentario (opcional)">
+    <button type="submit" class="btn">Subir</button>
+  </form>
+
+  <h3>Archivos Subidos</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Comentario</th>
+        <th>Fecha</th>
+        <th>Descargar</th>
+      </tr>
+    </thead>
+    <tbody id="fileTableBody">
+      <!-- Se agregan filas aquí -->
+    </tbody>
+  </table>
+  <script src="table.js"></script>
     </section>
 </body>
 </html>
